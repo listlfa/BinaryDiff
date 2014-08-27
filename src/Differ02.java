@@ -14,7 +14,7 @@ import java.util.Arrays;
  * @author a
  *
  */
-public class Differ {
+public class Differ02 {
 
 	/**
 	 * @param args
