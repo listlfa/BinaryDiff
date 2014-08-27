@@ -24,7 +24,8 @@ public class Differ {
 		// TODO Auto-generated method stub
 		System.out.println("Hello World!");
 		
-		String input_file = "/home/a/differtest.png";
+//		String input_file = "/home/a/differtest.png";
+		String input_file = "c:\\home\\a\\differ-test.zip";
 		byte buf[] = new byte[1024];
 		int bytesRead = 0;
 		try {
