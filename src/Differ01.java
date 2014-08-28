@@ -12,6 +12,8 @@ import java.util.Arrays;
 
 /**
  * @author a
+ * 
+ * confirm file access
  *
  */
 public class Differ01 {

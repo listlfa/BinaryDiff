@@ -16,12 +16,10 @@ import java.util.Arrays;
 /**
  * @author a
  * 
- * move file access to NIO
- * read file contents
- * print hashes of file content chunks
+ * write hash results to text file
  *
  */
-public class Differ02 {
+public class Differ03 {
 
 	/**
 	 * @param args
