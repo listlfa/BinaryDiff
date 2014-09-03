@@ -39,7 +39,6 @@ public class Differ04 {
 		String outputFolderName = "c:\\home\\a";
 		String outputFileName = "differ-hashes.text";
 		String outputFileContents = "";
-		String[] test;
 		StringBuilder test2 = new StringBuilder();
 		List<String> test3 = new ArrayList<String>();
 		boolean fileIsOK = false;  		
@@ -80,25 +79,26 @@ public class Differ04 {
 					System.out.format("-    -    - \n");
 
 					outputFileContents += String.valueOf(bb.hashCode()) + "\n";
-//					test += String.valueOf(bb.hashCode()) + "\n";
-					test2.append(String.valueOf(bb.hashCode()));
-					test2.append(System.lineSeparator());
+					test2.append(String.valueOf(bb.hashCode()) + System.lineSeparator());
 
 					bb.clear();
 				}
 
 				fis.close();
 				
+				//write hashes
 				if (!Files.isRegularFile(outputFilePath))
 				{
 					Files.createFile(outputFilePath);
 				}				
-//				Files.write(Paths.get(outputFolderName + "\\" + outputFileName), outputFileContents.getBytes(), StandardOpenOption.TRUNCATE_EXISTING);
 				Files.write(Paths.get(outputFolderName + "\\" + outputFileName), test2.toString().getBytes(), StandardOpenOption.TRUNCATE_EXISTING);
 
 				// read hashes
 				test3 = Files.readAllLines(outputFilePath, Charset.defaultCharset());
-				System.out.println(test3);
+				System.out.print(test3);
+				for (String temp3 : test3) {
+					System.out.println(temp3);
+				}
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
